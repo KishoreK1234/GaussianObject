@@ -319,6 +319,8 @@ if __name__ == "__main__":
     args = parser.parse_args(sys.argv[1:])
     args.save_iterations.append(args.iterations)
 
+    print(args)
+    print(args.source_path,"Source Path")
     assert args.sparse_view_num > 0, 'leave_one_out is for sparse view training'
     assert os.path.exists(os.path.join(args.source_path, f"sparse_{args.sparse_view_num}.txt")), f"sparse_{args.sparse_view_num}.txt not found!"
 
